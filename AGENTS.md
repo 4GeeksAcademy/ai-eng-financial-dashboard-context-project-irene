@@ -12,4 +12,8 @@ Agents working on this project **must**:
   `./memory-bank`  
   _(if the directory exists)_
 
+- Before working on the frontend, read `./.agents/rules/fronted.md`.
+- Before working on the backend, read `./.agents/rules/backend.md`.
+- For changes that affect both sides or their API contract, read both rules.
+
 Before taking action (analyzing code, modifying files, or generating outputs), always review the latest files in these locations to ensure compliance with project conventions, context, and operational constraints.
