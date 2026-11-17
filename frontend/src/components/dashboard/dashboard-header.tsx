@@ -1,10 +1,16 @@
-import { LayoutDashboard } from 'lucide-react'
+import { LayoutDashboard, ArrowLeftRight } from 'lucide-react'
 
 interface DashboardHeaderProps {
   period?: string
+  showComparisonLink?: boolean
+  onNavigateToComparison?: () => void
 }
 
-export function DashboardHeader({ period = '2024 — Full Year' }: DashboardHeaderProps) {
+export function DashboardHeader({
+  period = '2024 — Full Year',
+  showComparisonLink = false,
+  onNavigateToComparison,
+}: DashboardHeaderProps) {
   return (
     <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
       <div className="flex items-center gap-3">
@@ -17,6 +23,15 @@ export function DashboardHeader({ period = '2024 — Full Year' }: DashboardHead
         </div>
       </div>
       <div className="flex items-center gap-2">
+        {showComparisonLink && onNavigateToComparison && (
+          <button
+            onClick={onNavigateToComparison}
+            className="inline-flex items-center gap-1.5 rounded-md border border-border bg-secondary px-3 py-1.5 text-xs font-medium text-secondary-foreground hover:bg-accent transition-colors"
+          >
+            <ArrowLeftRight size={14} />
+            B2B vs B2C
+          </button>
+        )}
         <span className="inline-flex items-center rounded-full border border-border bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">
           {period}
         </span>

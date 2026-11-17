@@ -23,3 +23,24 @@ export interface MonthlyDataPoint {
   outcome: number
   profitPercent: number
 }
+
+export interface AlertEntry {
+  period: string
+  outcome_total: number
+  baseline_average: number
+  increase_ratio: number
+}
+
+export interface TopCategoryItem {
+  category: Category
+  operation_type: OperationType
+  total_amount: number
+}
+
+export interface FacetsResponse {
+  operation_types: OperationType[]
+  business_types: BusinessType[]
+  categories: Category[]
+  min_date: string
+  max_date: string
+}

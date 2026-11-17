@@ -11,6 +11,7 @@
 - `frontend/src/App.tsx`: carga `/api/metrics`, mantiene estados de carga/error y conecta cálculos con componentes del dashboard.
 - `frontend/src/components/dashboard/`: componentes de KPI y gráficos.
 - `frontend/src/lib/`: tipos y utilidades financieras; las pruebas de utilidades están junto a estas.
+- `frontend/specs/api-tyes.ts`: interfaces de respuestas de facetas, alertas y categorías principales, con tipos de dominio reutilizados del frontend.
 - `backend/app/main.py`: crea la aplicación FastAPI e incluye el router.
 - `backend/app/routes.py`: modelos, generación de movimientos simulados y endpoints.
 - `backend/tests/`: pruebas de endpoints.
